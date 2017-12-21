@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CityJinFu.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>38E5A6D9FB05DD01DB71F9648A6053CC435DB4BA</string>
+				<key>dateExpires</key>
+				<string>2018/10/24</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>4N4MLS3Q46.com.yunfucloud.HCJF</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>4N4MLS3Q46</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>CityJinFu.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>c49ba2cf-33c7-483b-9e65-2abdb81f4b8d</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.yunfucloud.HCJF</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>4N4MLS3Q46</string>
+				<key>name</key>
+				<string>Zhe Jiang Encheng Network Technology Co., Ltd.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
