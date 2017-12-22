@@ -25,33 +25,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    SXYView *sxyView = [SXYView createViewAddSubView:self.view color:[UIColor redColor] tapBlock:^(BOOL hidden) {
-        NSLog(@"%d", hidden);
-    }];
-    
-    sxyView.frame = CGRectMake(100, 250, 100, 100);
-    
-    self.button.frame = CGRectMake(100, 350, 100, 30);
-    
-    _index = 11;
+    //动态添加方法
+    [self dynamicConditionMethod];
 }
-
 /**
- *  button
+ *  动态添加方法
  */
-- (UIButton *)button{
-    if(!_button){
-        _button = [UIButton setTitle:@"我的" titleColor:[UIColor redColor] subView:self.view addActionBlock:^(UIButton *button, ButtonTitleColor color) {
-            NSLog(@"%@    %ld", button.titleLabel.text, color);
-        }];
+- (void)dynamicConditionMethod{
+    SXYView *view = [[SXYView alloc] init];
+    SEL selector = NSSelectorFromString(@"guess");
+    
+    Method method = class_getInstanceMethod([view class], selector);
+    class_addMethod([view class], selector, (IMP)guessAnswer, method_getTypeEncoding(method));
+    if ([view respondsToSelector:selector]) {
+        ((void (*)(id, SEL))[view methodForSelector:selector])(view, selector);
+    } else{
+        NSLog(@"Sorry,I don't know");
     }
-    return _button;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+void guessAnswer(id self,SEL _cmd){
+    
+    NSLog(@"i am from beijing");
+    
 }
-
 
 @end

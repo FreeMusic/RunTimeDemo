@@ -90,6 +90,7 @@
 		0522DFD11FE0BA08000BAB40 = {
 			isa = PBXGroup;
 			children = (
+				053873281FECF28400FD58B2 /* 动态添加方法 */,
 				0522E00F1FE0BAA7000BAB40 /* Category */,
 				0522DFDC1FE0BA08000BAB40 /* RunTime_MethodSwizzling */,
 				0522DFF51FE0BA08000BAB40 /* RunTime_MethodSwizzlingTests */,
@@ -153,6 +154,13 @@
 				0522E0111FE0BAC6000BAB40 /* UIViewController+Category.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		053873281FECF28400FD58B2 /* 动态添加方法 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "动态添加方法";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
